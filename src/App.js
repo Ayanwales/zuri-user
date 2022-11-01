@@ -1,14 +1,32 @@
+import React from "react"
 import profile from "./assets/profile.jpg";
 import { RiShareForwardLine } from "react-icons/ri"
 import { SiSlack } from "react-icons/si"
 import { FaGithub } from "react-icons/fa"
+import { BsThreeDots } from "react-icons/bs"
 
 function App() {
+  const [mobile, setMobile] = React.useState(false)
+
+  React.useEffect(()=>{
+    const resize = ()=>{
+    if(window.innerWidth > 768){
+      setMobile(false)
+    }
+    else if (window.innerWidth < 768){
+      setMobile(true)
+    }
+  }
+  window.addEventListener("resize", resize);
+   return ()=>{
+    window.removeEventListener("resize", resize);
+   }
+  },[])
   return (
     <>
       <div className="App">
         <div className="profile">
-          <RiShareForwardLine className="share"/>
+          {mobile? <BsThreeDots className="dot"/> : <RiShareForwardLine className="share"/>}
           <img src={profile} className="profile-image" id="profile_img" alt="profile-image" />
           <h1 className="profile" id="twitter"> Ayanwale Sulaimon</h1>
           <h1 className="slack" id="slack" style={{display:"none"}}>sulaymon</h1>

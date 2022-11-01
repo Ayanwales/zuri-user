@@ -17,7 +17,7 @@ body{
   align-items: center;
   width: 70%;
 }
-.share{
+.share,.dot{
   position: absolute;
   left:152%;
   right: -58%;
