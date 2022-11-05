@@ -4,18 +4,18 @@
   box-sizing: border-box;
 }
 body{
-  font-family: sanserif;
-  background-color: #eaecf0;
+  font-family: "Inter", sans-serif;
   width: 100%;
   padding: auto;
 }
-.App{
+.App{ 
   display: flex;
   margin:auto;
-  background-color: #F4F5F7;
+  border-radius: 5px;
+  background-color: rgb(247, 245, 245);
   flex-direction: column;
   align-items: center;
-  width: 70%;
+  width: 100%;
 }
 .share,.dot{
   position: absolute;
@@ -66,7 +66,7 @@ body{
   padding:25px 300px;
   border-radius:10px;
   outline: none;
-  width:780px;
+  width:820px;
   cursor: pointer;
   text-align: center;
   font-size: 14px;
@@ -106,10 +106,141 @@ body{
   font-weight: 400;
   text-transform: capitalize;
 }
+.contact{
+  width:100%;
+  background-color: #ffffff;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;  
+}
+.contact_header{
+  width: 80%;
+  align-items: center;
+  font-style: normal;
+  font-family: "Inter", sans-serif;
+  padding: 64px;
+}
+
+.contact_header h1{
+  line-height: 1.6;
+  text-align: left;
+  font-size: 36px;
+  font-weight: 600;
+  width: 450px;
+  color:#101828;
+  text-transform: capitalize;
+}
+.contact_header p{
+  font-size:16px;
+  font-weight: 400;
+  line-height: 1.6;
+  width:500px;
+  text-align:left;
+  color:#475467;
+}
+.contact_form{
+  width:80%;
+  margin-left: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items:space-between;
+  justify-content: center;
+}
+.box1{
+  display: inline;
+  align-items:stretch;
+  width: 80%;
+  position: relative;
+}
+.label-firstname,.label-lastname{
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  margin: 15px;
+  position: absolute;
+  top: -20px;
+  text-align: left;
+  color:#344054;
+}
+label{
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  margin: 10px;
+  text-align: left;
+  color:#344054;
+}
+.first_name,.last_name{
+  padding:10px 14px;
+  align-items: center;
+  text-align: left;
+  margin: 15px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px rgba(16px,24,40,0.05);
+  width:300px;
+}
+.email{
+  padding:10px 14px;
+  align-items: center;
+  text-align: left;
+  margin: 10px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  box-shadow:0px 1px 2px rgba(16px,24,40,0.5);
+  width:650px;
+}
+.message{
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  box-shadow:0px 1px 2px rgba(16px,24,40,0.05);
+  width:650px;
+  height: 150px;
+  margin: 10px;
+  align-items: center;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+.check-para{
+  display:flex;
+  flex-direction:row;
+  align-items: flex-start;
+  justify-content:space-around;
+  width: 600px;
+  margin: 15px;
+}
+.checkbox{
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px rgba(16px,24,40,0.05);
+}
+.input_paragraph{
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+.message_btn{
+  padding:10px 20px;
+  background-color:blue;
+  color: #F4F5F7;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid blue;
+  cursor:pointer;
+  text-align: center;
+  font-weight: 400;
+  font-style:normal;
+  width: 650px;
+  margin:20px;
+}
 @media screen and (min-width:320px) and (max-width: 768px){
   .App{
     width:700px;
-
   }
   .profile img{
     align-self: center;
@@ -147,5 +278,110 @@ body{
     flex-direction: column;
     align-items:flex-start;
     justify-content:space-evenly;
+  }
+  .contact_header{
+    width: 60%;
+    align-items:flex-start;
+    padding: 20px;
+  }
+  
+  .contact_header h1{
+    text-align: left;
+    font-size: 24px;
+    font-weight: 500;
+    width: 300px;
+  }
+  .contact_header p{
+    font-size:14px;
+    font-weight: 400;
+    width:300px;
+  }
+  .contact_form{
+    width:80%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items:space-between;
+    justify-content: center;
+  }
+  .box1{
+    display: block;
+    align-items:center;
+    width: 40%;
+  }
+  .label-firstname,.label-lastname{
+    font-size: 12px;
+    text-align: left;
+  }
+  label{
+    font-size: 12px;
+    margin: 5px;
+    text-align: left;
+  }
+  .first_name,.last_name{
+    padding:10px 14px;
+    align-items: center;
+    text-align: left;
+    margin: 15px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px rgba(16px,24,40,0.05);
+    width:300px;
+  }
+  .email{
+    padding:10px 14px;
+    align-items: center;
+    text-align: left;
+    margin: 5px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    box-shadow:0px 1px 2px rgba(16px,24,40,0.5);
+    width:300px;
+  }
+  .message{
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    box-shadow:0px 1px 2px rgba(16px,24,40,0.05);
+    width:300px;
+    height: 150px;
+    margin: 10px;
+    align-items: center;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .check-para{
+    display:flex;
+    flex-direction:row;
+    align-items: flex-start;
+    justify-content:space-between;
+    gap:10px;
+    width: 100vw;
+  }
+  .checkbox{
+    margin: 15px;
+    padding:10px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px rgba(16px,24,40,0.05);
+  }
+  .input_paragraph{
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+  }
+  .message_btn{
+    padding:10px 20px;
+    background-color:blue;
+    color: #F4F5F7;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+    font-style:normal;
+    width: 800px;
+    margin:20px;
   }
 }
