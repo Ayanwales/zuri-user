@@ -13,13 +13,14 @@ const Redirect = () => {
       localStorage.setItem("newUser", newUser)
     }
   }, [])
+
   return (
     <div className='redirect'>
         <h1> Form Submitted Successfully</h1>
-        <h1> Welcome {person.lastname} - {person.firstname}</h1>
-        <p> Please confirm your Email address {person.email}</p>
+        <h1> Welcome {person.lastname} - {person.firstname} </h1>
+        <p> Please confirm your Email address {person.email} </p>
     </div>
   )
 }
 
-export default Redirect
+export default Redirect;

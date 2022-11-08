@@ -11,16 +11,17 @@ const Contact = () => {
     checked: false
   })
   const handleChange = (e)=>{
-    const value = e.target.type ==="checkbox" ? e.target.checked : e.target.value
+    const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
     setState({
       ...state, [e.target.name]: value
      })
-     navigate('/Redirect')
+    
   }
   const handleSubmit = (e)=>{
     e.preventDefault();
     const newUser = JSON.stringify(state);
     localStorage.getItem('newUser') === null && localStorage.setItem('newUser', newUser);
+    navigate('/Redirect')
   }
   return (
     <>
